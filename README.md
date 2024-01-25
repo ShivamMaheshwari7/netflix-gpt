@@ -1,4 +1,4 @@
-### **Welcome to NetflixGPT 👋**
+## **Welcome to NetflixGPT 👋**
 
 **NetflixGPT** is a web application that leverages the power of OpenAI's GPT-3 to enhance your Netflix experience. With this project, you can generate personalized movie recommendations based on your preferences, engage in natural language conversations to discover new content, and get information about your favorite movies.
 
@@ -7,6 +7,7 @@
 Demo : [NetflixGPT](https://netflixgpt-6d015.web.app/ "NetflixGPT")
 
 Demo mail : shivam@gmail.com
+
 Demo password : Shivam@123
 
 ## **Technologies Used**
