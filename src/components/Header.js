@@ -7,6 +7,7 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO_URL, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import lang from "../utils/languageConstants";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -63,13 +64,10 @@ const Header = () => {
             <select
               className="rounded-lg font-semibold px-2"
               onChange={handleLanguageChange}
+              value={langKey}
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
-                <option
-                  key={lang.identifier}
-                  value={lang.identifier}
-                  selected={lang.identifier === langKey}
-                >
+                <option key={lang.identifier} value={lang.identifier}>
                   {lang.name}
                 </option>
               ))}
@@ -79,7 +77,7 @@ const Header = () => {
             className="mx-5 px-3 bg-white text-blue-700 font-semibold rounded-lg text-md"
             onClick={handleGptSearchClick}
           >
-            {showGptSearch ? "Movies" : "GPT Search"}
+            {showGptSearch ? lang[langKey].movies : "GPT Search"}
           </button>
           <img
             className="w-9 h-9 rounded-lg"
@@ -90,7 +88,7 @@ const Header = () => {
             className="font-semibold text-md text-white rounded-lg mr-5 ml-2 px-3 bg-red-600"
             onClick={handleSignOut}
           >
-            Sign Out
+            {showGptSearch ? lang[langKey].signOut : "Sign Out"}
           </button>
         </div>
       )}

@@ -38,6 +38,10 @@
 - GPT Search Page
 - GPT Search Bar
 - Multi-Language feature in our App
+- Integrate GPT APIs
+- GPT Moivie Suggestion
+- Added .env file for secret keys
+- Implement memoization for reducing unnecessary ajax calls for movie fetch
 
 # FEATURES
 
